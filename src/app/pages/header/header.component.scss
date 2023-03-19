@@ -1,0 +1,185 @@
+.header {
+  .width-wrapper {
+    width: 240px;
+    position: relative;
+    .position-wrapper {
+      height: 100%;
+      position: fixed;
+      top: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .nav {
+        .logo-link {
+          .logo-container {
+            font-size: 1rem;
+            fill: rgb(29, 155, 240);
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50px;
+            margin-top: 1px;
+            cursor: pointer;
+            transition: 0.2s;
+            &:hover {
+              background-color: rgba(29, 155, 240, 0.1);
+            }
+            .logo {
+              width: 28.83px;
+              height: 23.07px;
+            }
+          }
+        }
+
+        .nav-bar {
+          .link {
+            text-decoration: none;
+            padding: 4px 0;
+            //just for developing
+            &:first-child {
+              .container {
+                .text {
+                  font-family: "HelveticaNeueLTProBold" !important;
+                  font-weight: bold !important;
+                }
+              }
+            }
+            .container {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              border-radius: 50px;
+              width: fit-content;
+              cursor: pointer;
+              padding: 12px;
+              &:hover {
+                background-color: rgba(15, 20, 25, 0.1);
+              }
+
+              .icon {
+                width: 24px;
+                height: 24px;
+                gap: 10px;
+                display: grid;
+                align-items: center;
+              }
+              .text {
+                margin: 0 16px;
+                letter-spacing: 1px;
+                color: #0f1419;
+                font-size: 1.2rem;
+                font-family: "HelveticaNeueLTProLt";
+              }
+            }
+          }
+        }
+
+        .tweet-container {
+          margin: 20px 0;
+          .tweet {
+            text-decoration: none;
+            .wrapper {
+              font-family: "HelveticaNeueLTProBold";
+              background-color: rgb(29, 155, 240);
+              box-shadow: rgba(0, 0, 0, 0.08) 0px 8px 28px;
+              border: 0;
+              border-radius: 50px;
+              color: white;
+              cursor: pointer;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              &:hover {
+                background-color: rgb(26, 140, 216);
+              }
+              .icon {
+                display: none;
+                fill: white;
+                width: 20px;
+                height: 20px;
+              }
+            }
+          }
+        }
+      }
+      .account-switcher {
+        display: flex;
+        align-items: center;
+        height: 50px;
+        border-radius: 50px;
+        cursor: pointer;
+        &:hover {
+          background-color: rgba(15, 20, 25, 0.1);
+        }
+        .account-img {
+          width: 35px;
+          height: 35px;
+          object-fit: cover;
+          border-radius: 50px;
+          margin: 10px;
+        }
+
+        .details {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 1px;
+          p {
+            margin: 0;
+            font-size: .75rem;
+            letter-spacing: 0.5px;
+
+            &.name {
+              font-family: "HelveticaNeueLTProBold";
+            }
+            &.user-name {
+              font-family: "HelveticaNeueLTProLt";
+              font-weight: lighter;
+              color: #536471;
+            }
+          }
+        }
+
+        .more {
+          width: 15px;
+          margin: 0 5px;
+          fill: rgb(15, 20, 25);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1307px) {
+  .header {
+    .width-wrapper {
+      width: 88px;
+    }
+  }
+  .nav-bar .container .text {
+    display: none;
+    transition: 0.2s;
+  }
+
+  .tweet-container .wrapper {
+    .text {
+      display: none;
+      transition: 0.2s;
+    }
+    .icon {
+      display: block !important;
+      transition: 0.2s;
+    }
+  }
+
+  .account-switcher {
+    .name,
+    .user-name,
+    .more {
+      display: none;
+    }
+  }
+}

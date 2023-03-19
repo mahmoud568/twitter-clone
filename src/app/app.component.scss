@@ -1,0 +1,18 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  // font-family: "Cairo";
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  height: 99%;
+}
+
+app-home {
+  width: 500px;
+  height: 2000px;
+  border: 1px solid red;
+}

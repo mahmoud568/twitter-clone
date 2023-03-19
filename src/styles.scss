@@ -1,1 +1,32 @@
+/* Define HelveticaNeueLTPro fonts */
+@font-face {
+  font-family: 'HelveticaNeueLTProBold';
+  src: url('assets/fonts/HelveticaNeueLTProBold.otf') format('opentype');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueLTProRoman';
+  src: url('assets/fonts/HelveticaNeueLTProRoman.otf') format('opentype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueLTProLt';
+  src: url('assets/fonts/HelveticaNeueLTProLt.otf') format('opentype');
+  font-weight: normal;
+}
+
 /* You can add global styles to this file, and also import other style files */
+html,
+body {
+  height: 100%;
+}
+
+
+
+body {
+  margin: 0;
+  //   font-family: Helvetica, "Neue";
+  font-family: 'HelveticaNeueLTProRoman', sans-serif;
+}
