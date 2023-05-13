@@ -1,0 +1,318 @@
+.nav {
+  .width-wrapper {
+    width: 240px;
+    position: relative;
+    .position-wrapper {
+      height: 100%;
+      position: fixed;
+      top: 0;
+      padding: 0 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: auto;
+    }
+  }
+
+  // navigation styling
+
+  // logo styling
+  .logo-container {
+    padding: 1px;
+    font-size: 1rem;
+    fill: rgb(29, 155, 240);
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    margin-top: 1px;
+    cursor: pointer;
+    transition: 0.2s;
+    &:hover {
+      // background-color: rgba(29, 155, 240, 0.1);
+      background-color: rgba(15, 20, 25, 0.1);
+    }
+    .logo {
+      width: 28.83px;
+    }
+  }
+
+  // navigation bar styling
+  .link {
+    text-decoration: none;
+    padding: 4px 0;
+    //just for developing
+    &:first-child {
+      .container {
+        .text {
+          font-family: "HelveticaNeueLTProBold" !important;
+          font-weight: bold !important;
+        }
+      }
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50px;
+      width: fit-content;
+      cursor: pointer;
+      padding: 12px;
+      &:hover {
+        background-color: rgba(15, 20, 25, 0.1);
+      }
+
+      .icon {
+        width: 26.25px;
+        height: 26.25px;
+        font-size: 1.2rem;
+        color: rgb(15, 20, 25);
+      }
+      .text {
+        margin-right: 16px;
+        margin-left: 20px;
+        letter-spacing: 1px;
+        color: #0f1419;
+        font-size: 1.2rem;
+        font-family: "HelveticaNeueLTProLt";
+      }
+    }
+  }
+
+  .tweet-container {
+    margin: 20px 0;
+    .tweet {
+      text-decoration: none;
+      .tweet-wrapper {
+        font-family: "HelveticaNeueLTProBold";
+        background-color: rgb(29, 155, 240);
+        box-shadow: rgba(0, 0, 0, 0.08) 0px 8px 28px;
+        border: 0;
+        border-radius: 50px;
+        color: white;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover {
+          background-color: rgb(26, 140, 216);
+        }
+        .icon {
+          display: none;
+          fill: white;
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+  }
+
+  .account-switcher {
+    display: flex;
+    align-items: center;
+    // height: 50px;
+    border-radius: 50px;
+    transition: 0.2s;
+    margin-bottom: 12px;
+    padding: 1px;
+    cursor: pointer;
+    &:hover {
+      background-color: rgba(15, 20, 25, 0.1);
+    }
+    .account-img {
+      width: 40px;
+      height: 40px;
+      object-fit: cover;
+      border-radius: 50px;
+      margin: 10px;
+    }
+
+    .details {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      gap: 5px;
+      .name {
+        font-weight: 700;
+        font-family: "HelveticaNeueLTProBold";
+        margin: 0;
+        font-size: 15px;
+      }
+      .user-name {
+        font-family: "HelveticaNeueLTProLt";
+        font-weight: lighter;
+        color: rgb(83, 100, 113);
+        font-weight: 400;
+        margin: 0;
+        font-size: 15px;
+      }
+    }
+    .more {
+      width: 15px;
+      margin: 0 5px;
+      fill: rgb(15, 20, 25);
+    }
+  }
+
+  // styles for medium screens
+  @media screen and (max-width: 1307px) {
+    .width-wrapper {
+      width: 88px;
+    }
+
+    .nav-bar .container .text {
+      display: none;
+      transition: 0.2s;
+    }
+
+    .tweet-container {
+      .tweet {
+        .tweet-wrapper {
+          width: 50px;
+          height: 50px;
+          .text {
+            display: none;
+            transition: 0.2s;
+          }
+          .icon {
+            display: block;
+            transition: 0.2s;
+          }
+        }
+      }
+    }
+
+    .account-switcher {
+      .name,
+      .user-name,
+      .more {
+        display: none;
+      }
+    }
+  }
+
+  @media screen and (max-height: 794px) {
+    .tweet-container {
+      margin: 10px 0;
+    }
+  }
+
+  @media screen and (max-height: 704px) {
+    .link {
+      .container {
+        padding: 9px 12px;
+      }
+    }
+  }
+
+  @media screen and (max-height: 614px) {
+    .link {
+      .container {
+        padding: 6px 12px;
+      }
+    }
+  }
+}
+
+// styles for small screen
+
+// .floating-row-top {
+//   display: none;
+//   z-index: 2;
+//   position: fixed;
+//   width: 100vw;
+//   border: 1px solid black;
+//   height: 53px;
+//   backdrop-filter: blur(12px);
+//   transition-duration: 350ms;
+//   background-color: rgba(255, 255, 255, 0.85);
+//   &.scrolled {
+//     transform: translate3d(0px, 0px, 0px) translateY(-53px);
+//   }
+//   .content-wrapper {
+//     padding: 0 16px;
+//     .content {
+//       display: flex;
+//       align-items: center;
+//       .header-toggle-wrapper {
+//         width: 56px;
+//         height: 53px;
+//         display: flex;
+//         align-items: center;
+//         .header-toggle {
+//           padding: 5px;
+//           display: flex;
+//           justify-content: center;
+//           align-items: center;
+//           border-radius: 50%;
+//           border: 0;
+//           .account-img {
+//             width: 32px;
+//             height: 32px;
+//             border-radius: 50%;
+//             object-fit: cover;
+//           }
+//         }
+//       }
+//       .twitter-logo-wrapper {
+//         flex-grow: 1;
+//         display: flex;
+//         justify-content: center;
+//         .twitter-logo {
+//           border: 0;
+//           .logo {
+//             width: 1.75rem;
+//             fill: rgb(29, 155, 240);
+//           }
+//         }
+//       }
+//       .setting-wrapper {
+//         width: 56px;
+//         height: 53px;
+//       }
+//     }
+//   }
+// }
+
+// .account-img,
+// .logo {
+//   width: 50px;
+// }
+
+
+
+// styles for small screen
+
+.floating-nav-row {
+  display: none;
+  z-index: 2;
+  position: fixed;
+  width: 100vw;
+  border: 1px solid black;
+  height: 53px;
+  backdrop-filter: blur(12px);
+  transition-duration: 350ms;
+  background-color: rgba(255, 255, 255, 0.85);
+  bottom: 0;
+  .nav-wrapper {
+    padding: 0 16px;
+    svg {
+      width: 1.75rem;
+    }
+  }
+}
+
+
+@media screen and (max-height: 500px), (max-width: 500px) {
+  .nav {
+    display: none;
+  }
+
+  .floating-nav-row,
+  .floating-row-top {
+    display: block;
+  }
+}
