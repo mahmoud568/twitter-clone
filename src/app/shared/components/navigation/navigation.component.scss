@@ -217,72 +217,6 @@
   }
 }
 
-// styles for small screen
-
-// .floating-row-top {
-//   display: none;
-//   z-index: 2;
-//   position: fixed;
-//   width: 100vw;
-//   border: 1px solid black;
-//   height: 53px;
-//   backdrop-filter: blur(12px);
-//   transition-duration: 350ms;
-//   background-color: rgba(255, 255, 255, 0.85);
-//   &.scrolled {
-//     transform: translate3d(0px, 0px, 0px) translateY(-53px);
-//   }
-//   .content-wrapper {
-//     padding: 0 16px;
-//     .content {
-//       display: flex;
-//       align-items: center;
-//       .header-toggle-wrapper {
-//         width: 56px;
-//         height: 53px;
-//         display: flex;
-//         align-items: center;
-//         .header-toggle {
-//           padding: 5px;
-//           display: flex;
-//           justify-content: center;
-//           align-items: center;
-//           border-radius: 50%;
-//           border: 0;
-//           .account-img {
-//             width: 32px;
-//             height: 32px;
-//             border-radius: 50%;
-//             object-fit: cover;
-//           }
-//         }
-//       }
-//       .twitter-logo-wrapper {
-//         flex-grow: 1;
-//         display: flex;
-//         justify-content: center;
-//         .twitter-logo {
-//           border: 0;
-//           .logo {
-//             width: 1.75rem;
-//             fill: rgb(29, 155, 240);
-//           }
-//         }
-//       }
-//       .setting-wrapper {
-//         width: 56px;
-//         height: 53px;
-//       }
-//     }
-//   }
-// }
-
-// .account-img,
-// .logo {
-//   width: 50px;
-// }
-
-
 
 // styles for small screen
 
@@ -311,8 +245,7 @@
     display: none;
   }
 
-  .floating-nav-row,
-  .floating-row-top {
+  .floating-nav-row {
     display: block;
   }
 }

@@ -12,7 +12,9 @@ import { TimelineForyouComponent } from './features/home/timeline-foryou/timelin
 import { TimelineFollowingComponent } from './features/home/timeline-following/timeline-following.component';
 import { SideTapsComponent } from './features/side-taps/side-taps.component';
 import { NavigationComponent } from './shared/components/navigation/navigation.component';
-import { SearchBarComponent } from './shared/components/search-bar/search-bar.component';
+import { BreadcrumbsComponent } from './shared/components/breadcrumbs/breadcrumbs.component';
+import { SearchInputComponent } from './shared/components/search-input/search-input.component';
+import { TopBarComponent } from './shared/components/top-bar/top-bar.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { SearchBarComponent } from './shared/components/search-bar/search-bar.co
     TweetComponent,
     SideTapsComponent,
     NavigationComponent,
-    SearchBarComponent
+    BreadcrumbsComponent,
+    SearchInputComponent,
+    TopBarComponent
   ],
   imports: [
     BrowserModule,
