@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-theme-settings-modal',
@@ -6,7 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./theme-settings-modal.component.scss']
 })
 export class ThemeSettingsModalComponent {
-  closeModal(): void {
-    // Logic to close the modal
-  }
+  @Output() closeModal: EventEmitter<void> = new EventEmitter<void>();
+
 }
