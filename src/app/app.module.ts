@@ -15,6 +15,7 @@ import { NavigationComponent } from './shared/components/navigation/navigation.c
 import { BreadcrumbsComponent } from './shared/components/breadcrumbs/breadcrumbs.component';
 import { SearchInputComponent } from './shared/components/search-input/search-input.component';
 import { TopBarComponent } from './shared/components/top-bar/top-bar.component';
+import { ThemeSettingsModalComponent } from './shared/components/theme-settings-modal/theme-settings-modal.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { TopBarComponent } from './shared/components/top-bar/top-bar.component';
     NavigationComponent,
     BreadcrumbsComponent,
     SearchInputComponent,
-    TopBarComponent
+    TopBarComponent,
+    ThemeSettingsModalComponent
   ],
   imports: [
     BrowserModule,

@@ -1,19 +1,19 @@
 // styles for small screen
 
-
 .floating-row-top {
-  display: none;
-  z-index: 2;
-  position: fixed;
-  width: 100vw;
+  // display: none;
+  // z-index: 2;
+  // position: fixed;
   border: 1px solid black;
   height: 53px;
   backdrop-filter: blur(12px);
   transition-duration: 350ms;
   background-color: rgba(255, 255, 255, 0.85);
-  &.scrolled {
-    transform: translate3d(0px, 0px, 0px) translateY(-53px);
-  }
+
+  top: -0.5px;
+  position: sticky;
+  z-index: 10;
+
   .content-wrapper {
     padding: 0 16px;
     .content {
@@ -65,8 +65,7 @@
 }
 
 @media screen and (max-height: 500px), (max-width: 500px) {
-
-  .floating-row-top {
-    display: block;
+  .floating-row-top.scrolled {
+    transform: translate3d(0px, 0px, 0px) translateY(-53px);
   }
 }
