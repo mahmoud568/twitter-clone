@@ -1,8 +1,18 @@
 import { Component, HostListener } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { ThemeSettingsModalComponent } from '../theme-settings-modal/theme-settings-modal.component';
 
 @Component({
   selector: 'app-navigation',
   templateUrl: './navigation.component.html',
   styleUrls: ['./navigation.component.scss'],
 })
-export class NavigationComponent {}
+export class NavigationComponent {
+  constructor(private dialog: MatDialog) { }
+
+  openDialog(): void {
+    const dialogRef = this.dialog.open(ThemeSettingsModalComponent, {
+      width: '500px' // Set the desired width for your dialog
+    });
+  }
+}

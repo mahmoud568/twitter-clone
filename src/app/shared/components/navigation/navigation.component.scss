@@ -48,8 +48,8 @@
     &:first-child {
       .container {
         .text {
-          font-family: "HelveticaNeueLTProBold" !important;
-          font-weight: bold !important;
+          font-family: "chirp_regular";
+          font-weight: 700;
         }
       }
     }
@@ -77,7 +77,6 @@
         letter-spacing: 1px;
         color: #0f1419;
         font-size: 1.2rem;
-        font-family: "HelveticaNeueLTProLt";
       }
     }
   }
@@ -87,7 +86,7 @@
     .tweet {
       text-decoration: none;
       .tweet-wrapper {
-        font-family: "HelveticaNeueLTProBold";
+        // font-family: "HelveticaNeueLTProBold";
         background-color: rgb(29, 155, 240);
         box-shadow: rgba(0, 0, 0, 0.08) 0px 8px 28px;
         border: 0;
@@ -217,7 +216,6 @@
   }
 }
 
-
 // styles for small screen
 
 .floating-nav-row {
@@ -238,7 +236,6 @@
     }
   }
 }
-
 
 @media screen and (max-height: 500px), (max-width: 500px) {
   .nav {

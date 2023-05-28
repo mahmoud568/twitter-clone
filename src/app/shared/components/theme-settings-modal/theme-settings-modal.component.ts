@@ -1,4 +1,5 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component } from '@angular/core';
+import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-theme-settings-modal',
@@ -6,6 +7,10 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./theme-settings-modal.component.scss']
 })
 export class ThemeSettingsModalComponent {
-  @Output() closeModal: EventEmitter<void> = new EventEmitter<void>();
+  constructor(private dialogRef: MatDialogRef<ThemeSettingsModalComponent>) { }
 
+  // Add your dialog close logic here
+  closeDialog(): void {
+    this.dialogRef.close();
+  }
 }

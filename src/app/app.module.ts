@@ -16,6 +16,10 @@ import { BreadcrumbsComponent } from './shared/components/breadcrumbs/breadcrumb
 import { SearchInputComponent } from './shared/components/search-input/search-input.component';
 import { TopBarComponent } from './shared/components/top-bar/top-bar.component';
 import { ThemeSettingsModalComponent } from './shared/components/theme-settings-modal/theme-settings-modal.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -35,7 +39,10 @@ import { ThemeSettingsModalComponent } from './shared/components/theme-settings-
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatDialogModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
