@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -15,11 +16,18 @@ import { NavigationComponent } from './shared/components/navigation/navigation.c
 import { BreadcrumbsComponent } from './shared/components/breadcrumbs/breadcrumbs.component';
 import { SearchInputComponent } from './shared/components/search-input/search-input.component';
 import { TopBarComponent } from './shared/components/top-bar/top-bar.component';
-import { ThemeSettingsModalComponent } from './shared/components/theme-settings-modal/theme-settings-modal.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ThemingDialogComponent } from './shared/components/theming-dialog/theming-dialog.component';
+import { IconModule } from './shared/modules/icon.module';
 
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import {MatSliderModule} from '@angular/material/slider';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -35,16 +43,27 @@ import { MatIconModule } from '@angular/material/icon';
     BreadcrumbsComponent,
     SearchInputComponent,
     TopBarComponent,
-    ThemeSettingsModalComponent
+    ThemingDialogComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatDialogModule,
-    MatIconModule
+    MatIconModule,
+    MatButtonModule,
+    MatCardModule,
+    IconModule,
+    HttpClientModule,
+    MatSliderModule,
+    MatButtonToggleModule,
+    FormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {
+  constructor(private iconModule: IconModule) {
+    this.iconModule.registerIcons();
+  }
+}

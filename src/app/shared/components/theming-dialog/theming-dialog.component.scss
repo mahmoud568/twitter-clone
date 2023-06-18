@@ -1,7 +1,6 @@
 .header-container {
-    margin-bottom: 16px;
-    text-align: center;
-  }
+  margin-bottom: 16px;
+  text-align: center;
 
   .dialog-title {
     font-size: 24px;
@@ -12,11 +11,11 @@
     font-size: 16px;
     color: #666;
   }
+}
 
-  .tweet-card {
-    max-width: 400px;
-    margin-bottom: 16px;
-  }
+.tweet-card {
+  max-width: 400px;
+  margin-bottom: 16px;
 
   .tweet-avatar {
     background-color: #2196f3;
@@ -46,9 +45,67 @@
   .tweet-header {
     display: flex;
     align-items: center;
+
+    .tweet-author {
+      font-weight: bold;
+      margin-right: 8px;
+    }
+  }
+}
+
+.additional-element {
+  mat-slider {
+    width: 100%;
+  }
+}
+
+.font-size-slider {
+  .mdc-slider__tick-mark--active,
+  .mdc-slider__tick-mark--inactive {
+    height: var(--mdc-slider-with-tick-marks-container-size, 10px) !important;
+    width: var(--mdc-slider-with-tick-marks-container-size, 10px) !important;
+  }
+}
+
+.mat-button-toggle-group {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 5px 0px;
+
+  .mat-button-toggle {
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    mat-icon {
+      color: white;
+
+      &.hidden {
+        visibility: hidden;
+      }
+    }
+  }
+}
+
+.background-color {
+  .check-wrapper {
+    border: 2px solid rgb(92, 110, 126);
+    border-radius: 50%;
+
+    mat-icon {
+      color: aqua;
+    }
   }
 
-  .tweet-author {
-    font-weight: bold;
-    margin-right: 8px;
+  mat-button-toggle {
+    border-radius: 4px !important;
+    border: 2px solid rgb(92, 110, 126);
   }
+}
+
+// over ride display content dialog color
+.mat-mdc-dialog-container .mdc-dialog__content {
+  color: black !important; /* Reset color to black */
+}

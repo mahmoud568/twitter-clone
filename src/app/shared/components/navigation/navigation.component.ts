@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ThemingDialogComponent } from '../theming-dialog/theming-dialog.component';
 
@@ -12,7 +12,8 @@ export class NavigationComponent {
 
   openDialog(): void {
     const dialogRef = this.dialog.open(ThemingDialogComponent, {
-      width: '500px', // Set the desired width for your dialog
+      width: '600px', // Set the desired width for your dialog
+      height: '625px', // Set the desired width for your dialog
     });
 
     dialogRef.backdropClick().subscribe(() => {
