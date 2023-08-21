@@ -7,8 +7,7 @@ import * as moment from 'moment';
 @Component({
   selector: 'app-theming-dialog',
   templateUrl: './theming-dialog.component.html',
-  styleUrls: ['./theming-dialog.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  styleUrls: ['./theming-dialog.component.scss']
 })
 export class ThemingDialogComponent {
   constructor(private dialogRef: MatDialogRef<ThemingDialogComponent>) {}
@@ -23,7 +22,7 @@ export class ThemingDialogComponent {
 
   ngOnInit() {
     const now = moment();
-    const createdAt = now.subtract(10, 'minutes');
+    const createdAt = now.subtract(10,'m');
     this.tweetCreatedAt = createdAt.format('YYYY-MM-DD HH:mm:ss');
     this.updateTweetTime();
   }
@@ -35,17 +34,20 @@ export class ThemingDialogComponent {
     let tweetTime;
 
     if (duration.asSeconds() < 60) {
-      tweetTime = `${Math.floor(duration.asSeconds())} seconds ago`;
+      tweetTime = `${Math.floor(duration.asSeconds())} s`;
     } else if (duration.asMinutes() < 60) {
-      tweetTime = `${Math.floor(duration.asMinutes())} minutes ago`;
+      tweetTime = `${Math.floor(duration.asMinutes())} m`;
     } else if (duration.asHours() < 24) {
-      tweetTime = `${Math.floor(duration.asHours())} hours ago`;
-    } else if (duration.asDays() < 30) {
-      tweetTime = `${Math.floor(duration.asDays())} days ago`;
-    } else if (duration.asMonths() < 12) {
-      tweetTime = `${Math.floor(duration.asMonths())} months ago`;
+      tweetTime = `${Math.floor(duration.asHours())} h`;
     } else {
-      tweetTime = `${Math.floor(duration.asYears())} years ago`;
+      const currentYear = now.year();
+      const tweetYear = createdAt.year();
+
+      if (currentYear === tweetYear) {
+        tweetTime = createdAt.format('MMM DD'); // Display day and month
+      } else {
+        tweetTime = createdAt.format('MMM DD, YYYY'); // Display month, day, and year
+      }
     }
 
     this.tweetTime = tweetTime;

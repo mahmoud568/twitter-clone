@@ -1,37 +1,46 @@
 <div class="mat-dialog-container">
   <div mat-dialog-title class="header-container">
+    <mat-icon svgIcon="backspace"></mat-icon>
     <h2 class="dialog-title">Customize your view</h2>
+    <!-- <p class="dialog-description">
+      These settings affect all the Twitter accounts on this browser.
+    </p> -->
+  </div>
+  <div mat-dialog-content>
     <p class="dialog-description">
       These settings affect all the Twitter accounts on this browser.
     </p>
-  </div>
-  <div mat-dialog-content>
-    <!-- Add the remaining sub-containers here -->
-
-    <mat-card class="tweet-card">
-      <mat-card-header>
-        <div mat-card-avatar class="tweet-avatar"></div>
+    <div class="tweet-card">
+      <div class="card-header">
+        <div class="avatar">
+          <mat-icon svgIcon="logo"></mat-icon>
+        </div>
+      </div>
+      <div class="card-content">
         <div class="tweet-header">
-          <mat-card-title class="tweet-author">
+          <h2 class="tweet-author">
             Twitter
             <mat-icon svgIcon="verified_account"></mat-icon>
-          </mat-card-title>
-          <mat-card-subtitle class="tweet-username">@Twitter</mat-card-subtitle>
-          <span> - </span>
-          <p>{{ tweetTime }}</p>
+          </h2>
+          <h3 class="tweet-username">
+            <span class="at-symbol">@</span>
+            Twitter
+          </h3>
+          <span class="dot"></span>
+          <p class="time-counter">{{ tweetTime }}</p>
         </div>
-      </mat-card-header>
-      <mat-card-content>
         <p class="tweet-content">
           At the heart of Twitter are short messages called Tweets — just like
           this one — which can include photos, videos, links, text, hashtags,
-          and mentions like @Twitter.
+          and mentions like <span>@Twitter</span>.
         </p>
-      </mat-card-content>
-    </mat-card>
+      </div>
+    </div>
+
     <div class="additional-element">
       <h2 class="element-title">Font Size</h2>
       <div class="element-content">
+        <span class="small-size">Aa</span>
         <mat-slider
           class="font-size-slider"
           [max]="4"
@@ -39,66 +48,75 @@
           [step]="1"
           [showTickMarks]="true"
         >
-        <input matSliderThumb [(ngModel)]="selectedFontSize" (valueChange)="onFontSizeChange($event)">
-      </mat-slider>
+          <input
+            matSliderThumb
+            [(ngModel)]="selectedFontSize"
+            (valueChange)="onFontSizeChange($event)"
+          />
+        </mat-slider>
+        <span class="big-size">Aa</span>
       </div>
     </div>
 
     <div class="additional-element">
       <h2 class="element-title">Color</h2>
       <div class="element-content">
-        <mat-button-toggle-group
+        <mat-button-toggle-group  class="color-button-group"
           name="colorOptions"
           (change)="onColorChange($event)"
         >
-          <mat-button-toggle
+          <div class="row">
+          <mat-button-toggle class="color-button"
             value="Blue"
             [style.backgroundColor]="'rgb(29, 155, 240)'"
           >
             <mat-icon [ngClass]="{ hidden: selectedColor !== 'Blue' }"
-              >check</mat-icon
+              >check_sign</mat-icon
             >
           </mat-button-toggle>
-          <mat-button-toggle
+          <mat-button-toggle class="color-button"
             value="Yellow"
             [style.backgroundColor]="'rgb(255, 212, 0)'"
           >
             <mat-icon [ngClass]="{ hidden: selectedColor !== 'Yellow' }"
-              >check</mat-icon
+              >check_sign</mat-icon
             >
           </mat-button-toggle>
-          <mat-button-toggle
+          <mat-button-toggle class="color-button"
             value="Pink"
             [style.backgroundColor]="'rgb(249, 24, 128)'"
           >
             <mat-icon [ngClass]="{ hidden: selectedColor !== 'Pink' }"
-              >check</mat-icon
+              >check_sign</mat-icon
             >
           </mat-button-toggle>
-          <mat-button-toggle
+        </div>
+        <div class="row">
+          <mat-button-toggle class="color-button"
             value="Purple"
             [style.backgroundColor]="'rgb(120, 86, 255)'"
           >
             <mat-icon [ngClass]="{ hidden: selectedColor !== 'Purple' }"
-              >check</mat-icon
+              >check_sign</mat-icon
             >
           </mat-button-toggle>
-          <mat-button-toggle
+          <mat-button-toggle class="color-button"
             value="Orange"
             [style.backgroundColor]="'rgb(255, 122, 0)'"
           >
             <mat-icon [ngClass]="{ hidden: selectedColor !== 'Orange' }"
-              >check</mat-icon
+              >check_sign</mat-icon
             >
           </mat-button-toggle>
-          <mat-button-toggle
+          <mat-button-toggle class="color-button"
             value="Green"
             [style.backgroundColor]="'rgb(0, 186, 124)'"
           >
             <mat-icon [ngClass]="{ hidden: selectedColor !== 'Green' }"
-              >check</mat-icon
+              >check_sign</mat-icon
             >
           </mat-button-toggle>
+        </div>
         </mat-button-toggle-group>
       </div>
     </div>
@@ -106,53 +124,62 @@
     <div class="additional-element">
       <h2 class="element-title">Background Color</h2>
       <div class="element-content background-color">
-        <mat-button-toggle-group
+        <mat-button-toggle-group class="bgcolor-button-group"
           name="colorOptions"
           (change)="onBackgroundColorChange($event)"
         >
-          <mat-button-toggle
+          <mat-button-toggle class="bgcolor-button"
             value="lightTheme"
             [style.backgroundColor]="'rgba(255,255,255,1.00)'"
+            [ngClass]="{ 'selected-bg': selectedBackgroundColor == 'lightTheme' }"
           >
-            <span class="check-wrapper">
+          <div class="content-wrapper">
+            <div class="check-wrapper">
               <mat-icon
-                [ngClass]="{ hidden: selectedBackgroundColor !== 'lightTheme' }"
-                >check</mat-icon
+              [ngClass]="{ hidden: selectedBackgroundColor !== 'lightTheme' }"
+              >check_sign</mat-icon
               >
-            </span>
-            <span>Default</span>
+            </div>
+            <span class="theme-name">Default</span>
+          </div>
           </mat-button-toggle>
-          <mat-button-toggle
+          <mat-button-toggle class="bgcolor-button"
             value="dimTheme"
             [style.backgroundColor]="'rgb(21, 32, 43)'"
             [style.color]="'white'"
+            [ngClass]="{ 'selected-bg': selectedBackgroundColor == 'dimTheme' }"
           >
+          <div class="content-wrapper">
             <span class="check-wrapper">
               <mat-icon
                 [ngClass]="{ hidden: selectedBackgroundColor !== 'dimTheme' }"
-                >check</mat-icon
+                >check_sign</mat-icon
               >
             </span>
-            <span>Dim</span>
+            <span class="theme-name">Dim</span>
+          </div>
           </mat-button-toggle>
-          <mat-button-toggle
+          <mat-button-toggle class="bgcolor-button"
             value="darkTheme"
             [style.backgroundColor]="'rgb(0, 0, 0)'"
             [style.color]="'white'"
+            [ngClass]="{ 'selected-bg': selectedBackgroundColor == 'darkTheme' }"
           >
+          <div class="content-wrapper">
             <span class="check-wrapper">
               <mat-icon
                 [ngClass]="{ hidden: selectedBackgroundColor !== 'darkTheme' }"
-                >check</mat-icon
+                >check_sign</mat-icon
               >
             </span>
-            <span>Lights out</span>
+            <span class="theme-name">Lights out</span>
+          </div>
           </mat-button-toggle>
         </mat-button-toggle-group>
       </div>
     </div>
   </div>
-  <div mat-dialog-actions align="end">
-    <button mat-button (click)="closeDialog()">Done</button>
+  <div mat-dialog-actions align="center">
+    <button mat-button class="action-button" (click)="closeDialog()">Done</button>
   </div>
 </div>

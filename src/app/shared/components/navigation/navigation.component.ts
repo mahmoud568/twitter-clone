@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { ThemingDialogComponent } from '../theming-dialog/theming-dialog.component';
 
 @Component({
@@ -8,13 +8,16 @@ import { ThemingDialogComponent } from '../theming-dialog/theming-dialog.compone
   styleUrls: ['./navigation.component.scss'],
 })
 export class NavigationComponent {
-  constructor(private dialog: MatDialog) { }
+  constructor(private dialog: MatDialog) {
+    this.openDialog();
+  }
 
   openDialog(): void {
-    const dialogRef = this.dialog.open(ThemingDialogComponent, {
-      width: '600px', // Set the desired width for your dialog
-      height: '625px', // Set the desired width for your dialog
-    });
+    const config: MatDialogConfig = {
+      panelClass: "theming-dialog-responsive"
+    }
+
+    const dialogRef = this.dialog.open(ThemingDialogComponent, config);
 
     dialogRef.backdropClick().subscribe(() => {
       // Close the dialog

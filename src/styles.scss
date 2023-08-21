@@ -60,18 +60,17 @@ $twitter-clone-theme: mat.define-light-theme(
   font-weight: 400;
 }
 
-@font-face {
-  font-family: "chirp_bold";
-  src: url("assets/fonts/chirp_bold.otf") format("opentype");
-  font-weight: 700;
-}
+// @font-face {
+//   font-family: "chirp_bold";
+//   src: url("assets/fonts/chirp_bold.otf") format("opentype");
+//   font-weight: 700;
+// }
 
 @font-face {
   font-family: "chirp_heavy";
   src: url("assets/fonts/chirp_heavy.otf") format("opentype");
   font-weight: 700;
 }
-
 
 /* You can add global styles to this file, and also import other style files */
 html,
@@ -85,8 +84,27 @@ body {
   font-family: "chirp_light", sans-serif;
 }
 
-
 // give dialog popup bortder radius
 .mat-mdc-dialog-container .mdc-dialog__surface {
-  border-radius: var(--mdc-dialog-container-shape, var(--mdc-shape-medium, 16px)) !important;
+  border-radius: var(
+    --mdc-dialog-container-shape,
+    var(--mdc-shape-medium, 16px)
+  ) !important;
+}
+
+// theming dialog
+.theming-dialog-responsive {
+  width: 600px;
+  height: 625px;
+}
+
+@media screen and (max-width: 705px), (max-height: 499px) {
+  .theming-dialog-responsive {
+    max-width: 100% !important;
+    width: 100%;
+    height: 100%;
+    .mat-mdc-dialog-container .mdc-dialog__surface {
+      border-radius: 0 !important;
+    }
+  }
 }

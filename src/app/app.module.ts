@@ -27,6 +27,7 @@ import { MatCardModule } from '@angular/material/card';
 import {MatSliderModule} from '@angular/material/slider';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import { FormsModule } from '@angular/forms';
+import { AtHashColorDirectiveDirective } from './shared/directives/at-hash-color-directive.directive';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { FormsModule } from '@angular/forms';
     BreadcrumbsComponent,
     SearchInputComponent,
     TopBarComponent,
-    ThemingDialogComponent
+    ThemingDialogComponent,
+    AtHashColorDirectiveDirective
   ],
   imports: [
     BrowserModule,
