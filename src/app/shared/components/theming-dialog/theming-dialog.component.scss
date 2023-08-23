@@ -1,364 +1,3 @@
-// // Header
-// .header-container {
-//   text-align: center;
-//   margin: 0;
-//   padding: 0;
-//   .dialog-title {
-//     font-family: "chirp_heavy";
-//     font-size: 23px;
-//     font-weight: 800;
-//     line-height: 28px;
-//     margin: -10px 0 15px 0;
-//   }
-//   mat-icon {
-//     display: none;
-//   }
-// }
-
-// .dialog-description {
-//   font-weight: 400;
-//   font-size: 15px;
-//   letter-spacing: 0.4px;
-//   line-height: 15px;
-//   margin: 0;
-//   margin-bottom: 15px;
-//   text-align: center;
-//   color: rgb(83, 100, 113);
-// }
-
-// // Mat Button Toggle Group
-// .mat-button-toggle-group {
-//   width: 100%;
-//   display: flex;
-//   justify-content: space-around;
-//   padding: 5px 0px;
-
-//   .mat-button-toggle {
-//     border-radius: 50%;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-
-//     mat-icon {
-//       color: white;
-
-//       &.hidden {
-//         visibility: hidden;
-//       }
-//     }
-//   }
-// }
-
-// // Background Color
-// .background-color {
-//   .check-wrapper {
-//     border-radius: 50%;
-
-//     mat-icon {
-//       color: aqua;
-//     }
-//   }
-
-//   mat-button-toggle {
-//     border-radius: 4px !important;
-//     border: 2px solid rgb(92, 110, 126);
-//   }
-// }
-
-// // Tweet Card
-// .tweet-card {
-//   max-width: 470px;
-//   margin: auto;
-//   display: flex;
-//   border-radius: 16px;
-//   border: 1px solid rgb(239, 243, 244);
-//   padding: 14px 16px;
-//   margin-top: 10px;
-
-//   .card-header {
-//     .avatar {
-//       width: 40px;
-//       height: 40px;
-//       border-radius: 50%;
-//       background-color: #16a3fa;
-//       display: flex;
-//       justify-content: center;
-//       align-items: center;
-//       mat-icon {
-//         width: 1.3rem;
-//         color: white;
-//       }
-//     }
-//   }
-
-//   .card-content {
-//     display: flex;
-//     flex-direction: column;
-//     margin-left: 10px;
-
-//     .tweet-header {
-//       display: flex;
-//       align-items: center;
-
-//       .tweet-author,
-//       .tweet-username,
-//       .time-counter {
-//         margin: 0;
-//       }
-
-//       .tweet-author {
-//         font-family: "chirp_regular";
-//         display: flex;
-//         align-items: center;
-//         justify-content: center;
-//         font-size: 0.9rem;
-
-//         mat-icon {
-//           width: 18px;
-//           height: 18px;
-//           color: #16a3fa;
-//           margin-left: 3px;
-//         }
-//       }
-
-//       .tweet-username {
-//         font-size: 1rem;
-//         color: rgb(83, 100, 113);
-//         font-family: "chirp_light";
-//         font-weight: 200;
-//         display: flex;
-//         align-items: center;
-//         justify-content: center;
-//         margin-left: 5px;
-//         letter-spacing: 0.5px;
-
-//         .at-symbol {
-//           font-size: 0.9rem;
-//         }
-//       }
-
-//       .dot {
-//         width: 1px;
-//         height: 1px;
-//         background-color: rgb(83, 100, 113);
-//         margin: 0px 5px;
-//       }
-
-//       .time-counter {
-//         color: rgb(83, 100, 113);
-//       }
-//     }
-
-//     .tweet-content {
-//       margin: 0;
-//       margin-top: 0.3rem;
-//       line-height: 1.1rem;
-//       font-size: 0.9rem;
-//       color: #0e1519;
-
-//       span {
-//         color: #16a3fa;
-//       }
-//     }
-//   }
-// }
-
-// // Additional Element
-// .additional-element {
-//   mat-slider {
-//     width: 100%;
-//   }
-
-//   .element-title {
-//     color: rgb(83, 100, 113);
-//     font-size: 13px;
-//     margin-bottom: 4px;
-//     font-weight: 700;
-//     letter-spacing: 0;
-//   }
-
-//   .element-content {
-//     background-color: rgb(247, 249, 249);
-//     margin-bottom: 12px;
-//     border-radius: 16px;
-//     display: flex;
-//     justify-content: space-between;
-//     align-items: center;
-//     padding: 4px 20px;
-
-//     .small-size {
-//       font-size: 13px;
-//       color: rgb(15, 20, 25);
-//       font-weight: 400;
-//     }
-
-//     .big-size {
-//       font-size: 20px;
-//       color: rgb(15, 20, 25);
-//       font-weight: 400;
-//     }
-
-//     .font-size-slider {
-//       display: flex;
-//       justify-content: center;
-//       align-items: center;
-//       width: 85%;
-//     }
-//   }
-// }
-
-// // Deep overrides (use sparingly)
-// ::ng-deep {
-//   // Override display content dialog color
-//   .mat-mdc-dialog-container .mdc-dialog__content {
-//     color: black !important; /* Reset color to black */
-//   }
-// }
-
-// // Color Button Group
-
-// .color-button-group {
-//   border: 0;
-//   display: flex;
-//   .row {
-//     display: flex;
-//     justify-content: space-around;
-//     align-items: center;
-//     width: 50%;
-//     .color-button {
-//       width: 40px;
-//       height: 40px;
-//       display: flex;
-//       justify-content: center;
-//       align-items: center;
-//       mat-icon {
-//         margin-top: -3px;
-//         margin-left: -4px;
-//       }
-//     }
-//   }
-// }
-
-// // Background Color Button Group
-// .bgcolor-button-group {
-//   border: 0;
-//   display: flex;
-//   justify-content: space-around;
-//   .bgcolor-button {
-//     min-height: 60px;
-//     min-width: 160px;
-//     border: 1px solid rgb(92, 110, 126);
-//     border-radius: 20px;
-//     margin: 4px;
-//     flex: 1;
-
-//     .content-wrapper {
-//       flex: 1;
-//       display: flex;
-//       justify-content: center;
-//       align-items: center;
-//       min-width: 120px;
-//       .theme-name {
-//         font-family: "chirp_heavy";
-//         letter-spacing: 0.05rem;
-//         flex: 1;
-//       }
-//       .check-wrapper {
-//         width: 15px;
-//         height: 15px;
-//         display: inline-flex;
-//         justify-content: center;
-//         align-items: center;
-//         border: 1px solid rgb(92, 110, 126);
-//         border-radius: 50%;
-//         background-color: transparent;
-//         mat-icon {
-//           margin: auto;
-//           font-size: 13px;
-//           margin-top: 1px;
-//           margin-left: 1px;
-//           color: white;
-//         }
-//       }
-//     }
-//   }
-
-//   .bgcolor-button.selected-bg {
-//     outline: 1px solid #16a3fa;
-//     border: 1px solid #16a3fa;
-//     .check-wrapper.check-wrapper {
-//       background-color: #16a3fa;
-//       border-color: #16a3fa;
-//     }
-//   }
-// }
-
-// .action-button {
-//   width: 72.25px;
-//   height: 36px;
-//   padding: 0 16px;
-//   background-color: #16a3fa;
-//   border-radius: 50px;
-//   color: white !important;
-//   font-family: "chirp_heavy";
-//   font-size: 15px;
-//   letter-spacing: 0.05rem;
-// }
-
-// // styles for small screen
-// // Add a media query for screens with width less than 705px
-// @media screen and (max-width: 705px), (max-height: 499px) {
-//   .mat-dialog-container {
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: space-between;
-//     min-height: 95%;
-//   }
-
-//   .mat-mdc-dialog-content {
-//     max-height: 100%;
-//   }
-
-//   .header-container {
-//     text-align: center;
-//     display: flex;
-//     margin-top: 20px;
-//     margin-bottom: 35px;
-//     justify-content: flex-start;
-//     flex-basis: 1;
-//     align-items: center;
-
-//     mat-icon {
-//       display: block;
-//       flex-grow: 1;
-//       cursor: pointer;
-//     }
-//     .dialog-title {
-//       flex-grow: 4;
-//       margin: 0;
-//     }
-//   }
-//   .color-button-group {
-//     flex-direction: column;
-//     gap: 15px 0;
-//     .row {
-//       width: 100%;
-//     }
-//   }
-
-//   .bgcolor-button-group {
-//     flex-direction: column;
-//     align-items: center;
-//     .bgcolor-button {
-//       width: 80%;
-//     }
-//   }
-
-//   .dialog-title {
-//     text-align: left;
-//   }
-// }
-
 // Header
 .header-container {
   text-align: center;
@@ -720,3 +359,366 @@
     text-align: left;
   }
 }
+
+
+// // Header
+// .header-container {
+//   text-align: center;
+//   margin: 0;
+//   padding: 0;
+//   .dialog-title {
+//     font-family: "chirp_heavy";
+//     font-size: 23px;
+//     font-weight: 800;
+//     line-height: 28px;
+//     margin: -10px 0 15px 0;
+//   }
+//   mat-icon {
+//     display: none;
+//   }
+// }
+
+// .dialog-description {
+//   font-weight: 400;
+//   font-size: 15px;
+//   letter-spacing: 0.4px;
+//   line-height: 15px;
+//   margin: 0;
+//   margin-bottom: 15px;
+//   text-align: center;
+//   color: rgb(83, 100, 113);
+// }
+
+// // Mat Button Toggle Group
+// .mat-button-toggle-group {
+//   width: 100%;
+//   display: flex;
+//   justify-content: space-around;
+//   padding: 5px 0px;
+
+//   .mat-button-toggle {
+//     border-radius: 50%;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+
+//     mat-icon {
+//       color: white;
+
+//       &.hidden {
+//         visibility: hidden;
+//       }
+//     }
+//   }
+// }
+
+// // Background Color
+// .background-color {
+//   .check-wrapper {
+//     border-radius: 50%;
+
+//     mat-icon {
+//       color: aqua;
+//     }
+//   }
+
+//   mat-button-toggle {
+//     border-radius: 4px !important;
+//     border: 2px solid rgb(92, 110, 126);
+//   }
+// }
+
+// // Tweet Card
+// .tweet-card {
+//   max-width: 470px;
+//   margin: auto;
+//   display: flex;
+//   border-radius: 16px;
+//   border: 1px solid rgb(239, 243, 244);
+//   padding: 14px 16px;
+//   margin-top: 10px;
+
+//   .card-header {
+//     .avatar {
+//       width: 40px;
+//       height: 40px;
+//       border-radius: 50%;
+//       background-color: #16a3fa;
+//       display: flex;
+//       justify-content: center;
+//       align-items: center;
+//       mat-icon {
+//         width: 1.3rem;
+//         color: white;
+//       }
+//     }
+//   }
+
+//   .card-content {
+//     display: flex;
+//     flex-direction: column;
+//     margin-left: 10px;
+
+//     .tweet-header {
+//       display: flex;
+//       align-items: center;
+
+//       .tweet-author,
+//       .tweet-username,
+//       .time-counter {
+//         margin: 0;
+//       }
+
+//       .tweet-author {
+//         font-family: "chirp_regular";
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+//         font-size: 0.9rem;
+
+//         mat-icon {
+//           width: 18px;
+//           height: 18px;
+//           color: #16a3fa;
+//           margin-left: 3px;
+//         }
+//       }
+
+//       .tweet-username {
+//         font-size: 1rem;
+//         color: rgb(83, 100, 113);
+//         font-family: "chirp_light";
+//         font-weight: 200;
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+//         margin-left: 5px;
+//         letter-spacing: 0.5px;
+
+//         .at-symbol {
+//           font-size: 0.9rem;
+//         }
+//       }
+
+//       .dot {
+//         width: 1px;
+//         height: 1px;
+//         background-color: rgb(83, 100, 113);
+//         margin: 0px 5px;
+//       }
+
+//       .time-counter {
+//         color: rgb(83, 100, 113);
+//       }
+//     }
+
+//     .tweet-content {
+//       margin: 0;
+//       margin-top: 0.3rem;
+//       line-height: 1.1rem;
+//       font-size: 0.9rem;
+//       color: #0e1519;
+
+//       span {
+//         color: #16a3fa;
+//       }
+//     }
+//   }
+// }
+
+// // Additional Element
+// .additional-element {
+//   mat-slider {
+//     width: 100%;
+//   }
+
+//   .element-title {
+//     color: rgb(83, 100, 113);
+//     font-size: 13px;
+//     margin-bottom: 4px;
+//     font-weight: 700;
+//     letter-spacing: 0;
+//   }
+
+//   .element-content {
+//     background-color: rgb(247, 249, 249);
+//     margin-bottom: 12px;
+//     border-radius: 16px;
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     padding: 4px 20px;
+
+//     .small-size {
+//       font-size: 13px;
+//       color: rgb(15, 20, 25);
+//       font-weight: 400;
+//     }
+
+//     .big-size {
+//       font-size: 20px;
+//       color: rgb(15, 20, 25);
+//       font-weight: 400;
+//     }
+
+//     .font-size-slider {
+//       display: flex;
+//       justify-content: center;
+//       align-items: center;
+//       width: 85%;
+//     }
+//   }
+// }
+
+// // Deep overrides (use sparingly)
+// ::ng-deep {
+//   // Override display content dialog color
+//   .mat-mdc-dialog-container .mdc-dialog__content {
+//     color: black !important; /* Reset color to black */
+//   }
+// }
+
+// // Color Button Group
+
+// .color-button-group {
+//   border: 0;
+//   display: flex;
+//   .row {
+//     display: flex;
+//     justify-content: space-around;
+//     align-items: center;
+//     width: 50%;
+//     .color-button {
+//       width: 40px;
+//       height: 40px;
+//       display: flex;
+//       justify-content: center;
+//       align-items: center;
+//       mat-icon {
+//         margin-top: -3px;
+//         margin-left: -4px;
+//       }
+//     }
+//   }
+// }
+
+// // Background Color Button Group
+// .bgcolor-button-group {
+//   border: 0;
+//   display: flex;
+//   justify-content: space-around;
+//   .bgcolor-button {
+//     min-height: 60px;
+//     min-width: 160px;
+//     border: 1px solid rgb(92, 110, 126);
+//     border-radius: 20px;
+//     margin: 4px;
+//     flex: 1;
+
+//     .content-wrapper {
+//       flex: 1;
+//       display: flex;
+//       justify-content: center;
+//       align-items: center;
+//       min-width: 120px;
+//       .theme-name {
+//         font-family: "chirp_heavy";
+//         letter-spacing: 0.05rem;
+//         flex: 1;
+//       }
+//       .check-wrapper {
+//         width: 15px;
+//         height: 15px;
+//         display: inline-flex;
+//         justify-content: center;
+//         align-items: center;
+//         border: 1px solid rgb(92, 110, 126);
+//         border-radius: 50%;
+//         background-color: transparent;
+//         mat-icon {
+//           margin: auto;
+//           font-size: 13px;
+//           margin-top: 1px;
+//           margin-left: 1px;
+//           color: white;
+//         }
+//       }
+//     }
+//   }
+
+//   .bgcolor-button.selected-bg {
+//     outline: 1px solid #16a3fa;
+//     border: 1px solid #16a3fa;
+//     .check-wrapper.check-wrapper {
+//       background-color: #16a3fa;
+//       border-color: #16a3fa;
+//     }
+//   }
+// }
+
+// .action-button {
+//   width: 72.25px;
+//   height: 36px;
+//   padding: 0 16px;
+//   background-color: #16a3fa;
+//   border-radius: 50px;
+//   color: white !important;
+//   font-family: "chirp_heavy";
+//   font-size: 15px;
+//   letter-spacing: 0.05rem;
+// }
+
+// // styles for small screen
+// // Add a media query for screens with width less than 705px
+// @media screen and (max-width: 705px), (max-height: 499px) {
+//   .mat-dialog-container {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: space-between;
+//     min-height: 95%;
+//   }
+
+//   .mat-mdc-dialog-content {
+//     max-height: 100%;
+//   }
+
+//   .header-container {
+//     text-align: center;
+//     display: flex;
+//     margin-top: 20px;
+//     margin-bottom: 35px;
+//     justify-content: flex-start;
+//     flex-basis: 1;
+//     align-items: center;
+
+//     mat-icon {
+//       display: block;
+//       flex-grow: 1;
+//       cursor: pointer;
+//     }
+//     .dialog-title {
+//       flex-grow: 4;
+//       margin: 0;
+//     }
+//   }
+//   .color-button-group {
+//     flex-direction: column;
+//     gap: 15px 0;
+//     .row {
+//       width: 100%;
+//     }
+//   }
+
+//   .bgcolor-button-group {
+//     flex-direction: column;
+//     align-items: center;
+//     .bgcolor-button {
+//       width: 80%;
+//     }
+//   }
+
+//   .dialog-title {
+//     text-align: left;
+//   }
+// }
+
